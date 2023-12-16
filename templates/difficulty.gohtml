@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hangman Web</title>
+    <link rel="stylesheet" type="text/css" href="/assets/difficulty2.css">
+</head>
+
+<body>
+<form action="/saveDifficulty" method="post">
+    <h1>Choose your difficulty:</h1>
+    <br>
+    <div>
+        <input type="radio" id="EASY" name="difficulty" value="wordsList/words.txt"
+               checked>
+        <label for="EASY" id="ELABEL">EASY</label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <input type="radio" id="NORMAL" name="difficulty" value="wordsList/words2.txt">
+        <label for="NORMAL" id="NLABEL">NORMAL</label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <input type="radio" id="HARD" name="difficulty" value="wordsList/words3.txt">
+        <label for="HARD" id="HLABEL">HARD</label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button type="submit">Confirm</button>
+    </div>
+</form>
+</body>
+</html>

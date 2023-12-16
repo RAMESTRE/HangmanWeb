@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{.PageTitle}}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/win2.css">
+</head>
+
+<body>
+
+
+{{if .Solo}}
+    <h1>Congratulation, you guessed the word right!</h1>
+    <br>
+    <h2>Do you want to play again ?</h2>
+    <br>
+    <form action="/restart" method="post">
+        <input id="yes" type="submit" value="Yes">
+    </form>
+{{else}}
+    {{if eq .NicknameP1 .NicknameChoose}}
+        <h1>Congratulation {{.NicknameP2}}, you guessed the word right!</h1>
+        <br>
+    {{else}}
+        <h1>Congratulation {{.NicknameP1}}, you guessed the word right!</h1>
+        <br>
+    {{end}}
+    <h2>Do you want to play again ?</h2>
+    <br>
+    <form action="/whoguess" method="post">
+        <input id="yes" type="submit" value="Yes">
+    </form>
+{{end}}
+<br>
+<br>
+<form action="/" method="post">
+    <input id="no" type="submit" value="No">
+</form>
+
+
+</body>
+</html>

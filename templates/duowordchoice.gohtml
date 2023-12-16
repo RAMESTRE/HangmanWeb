@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hangman Web</title>
+    <link rel="stylesheet" type="text/css" href="/assets/duowordchoice.css">
+</head>
+
+<body>
+    <h1>{{.Nickname}}, choose a word.</h1>
+    <br>
+    <h2>WARNING!
+    <br>
+    The editors are not responsible if you write an incorrect word.</h2>
+    <br>
+    <h2>-Your word must be between 2 and 20 characters</h2>
+
+    <form id="word" action="/transformWordChosen" method="post">
+        <label for="word">{{.Nickname}}, choose a word.</label>
+        <input type="text" name="wordtoguess" id="word" required>
+        <input id="button" type="submit" value="Confirm">
+    </form>
+</body>
+</html>

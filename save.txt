@@ -1,0 +1,1 @@
+{"Attempt":5,"Word":["t","u","r","b","u","l","e","n","c","e"],"WrongLetter":true,"WrongWord":true,"CopyWord":["t","u"," "," ","u","l","e","n","c"," "],"GuessWord":["t","u","r","b","u","l","e","n","c","e"],"AlreadyUsed":["a","c","e","j","l","n","o","u"],"NicknameP1":"","NicknameP2":"","Solo":true,"WordFile":"wordsList/words2.txt","NicknameChoose":""}

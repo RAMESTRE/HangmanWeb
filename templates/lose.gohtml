@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{.PageTitle}}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/loose2.css">
+</head>
+
+<body>
+
+
+{{if .Solo}}
+        <h1>You lost, the good word was {{range $element := .Word}}
+                {{- $element -}}
+            {{- end -}}</h1>
+        <br>
+        <h2>Do you want to play again ?</h2>
+        <br>
+        <form action="/restart" method="post">
+            <input id="yes" type="submit" value="Yes">
+        </form>
+{{else}}
+        {{if eq .NicknameP1 .NicknameChoose}}
+            <h1>{{.NicknameP1}} won !</h1>
+            <h2>The good word was {{range $element := .Word}}
+                    {{- $element -}}
+                {{- end -}}</h2>
+            <br>
+        {{else}}
+            <h1>{{.NicknameP2}} won !</h1>
+            <h2>The good word was {{range $element := .Word}}
+                    {{- $element -}}
+                {{- end -}}</h2>
+            <br>
+        {{end}}
+        <form action="/whoguess" method="post">
+            <input id="yes" type="submit" value="Yes">
+        </form>
+{{end}}
+<br>
+<br>
+<form action="/" method="post">
+    <input id="no" type="submit" value="No">
+</form>
+
+
+</body>
+</html>

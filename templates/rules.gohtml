@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <title>Hangman-web</title>
+    <link rel="stylesheet" type="text/css" href="/assets/rules2.css">
+</head>
+
+<body>
+    <div id="titleAlign">
+    <h1>Here are the rules of the two modes:</h1>
+    </div>
+
+    <div id="soloRules">
+    <h3>Solo Mode:</h3>
+    <br>
+    <p>-You will have the choice between guess the word or choose a LOWER letter.</p>
+    <br>
+    <p>-Even if a letter appears when the game starts,there can be this letter in the word again.</p>
+    <br>
+    <p>-If it is correct,the word/letter will be printed.<p>
+    <br>
+    <p>-Else, you will lose 1 life if you chose a letter and 2 lives if you guessed a word.</p>
+    <br>
+    <p>-If you lose your 10 lives, the game is over.</p>
+    <form action="/difficulty" method="post">
+        <input class="button" type="submit" value="Start Solo Mode">
+    </form>
+    </div>
+
+    <div id="duoRules">
+    <h3>Duo Mode:</h3>
+    <br>
+    <p>-Player 1 will have to write a word to guess for player 2</p>
+    <br>
+    <p>-Player 2 will have the choice between guess the word or choose a LOWER letter.</p>
+    <br>
+    <p>-Even if a letter appears when the game starts,there can be this letter in the word again.</p>
+    <br>
+    <p>-If it is correct,the word/letter will be printed.</p>
+    <br>
+    <p>-Else, player 2 will lose 1 life if he chose a letter and 2 lives if he guessed a word.</p>
+    <br>
+    <p>-If player 2 finds the word,he wins</p>
+    <br>
+    <p>-If player 2 loses his 10 lives, player 1 wins.</p>
+    <br>
+     <form action="/nickname" method="post">
+        <input class="button" type="submit" value="Start Duo Mode">
+    </form>
+    </div>
+</body>
+</html>

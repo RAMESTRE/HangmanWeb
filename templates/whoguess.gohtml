@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hangman Web</title>
+    <link rel="stylesheet" type="text/css" href="/assets/whoguess.css">
+</head>
+
+<body>
+    <h1>Choose who will have to write the word to guess</h1>
+
+    <form id="whoguess" action="/saveWhoWriteWord" method="post">
+    <div>
+        <input type="radio" name="player" value={{.NicknameP1}} checked>
+        <label>{{.NicknameP1}}</label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <input type="radio" name="player" value={{.NicknameP2}}>
+        <label>{{.NicknameP2}}</label>
+    </div>
+    <br>
+    <br>
+    <input id="button" type="submit" value="Confirm">
+    </form>
+</body>
+
+</html>

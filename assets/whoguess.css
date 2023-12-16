@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(-45deg, #57c746, rgba(117, 178, 64, 0.84), rgba(95, 138, 51, 0.84), rgba(67, 101, 34, 0.84));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1{
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#whoguess{
+    text-align: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+#button{
+    position: fixed;
+    left: 45%;
+    font-family:'Be Vietnam Pro', sans-serif;
+    width: 125px;
+    height: 50px;
+    background-color: #30FAB3;
+    border-radius: 8px;
+    transition-duration: 0,5s;
+    cursor: pointer;
+}
+
+#button:hover{
+    background-color: white;
+}

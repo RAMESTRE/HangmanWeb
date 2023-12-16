@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{.PageTitle}}</title>
+    <link rel="stylesheet" type="text/css" href="/assets/index2.css?">
+</head>
+
+<body>
+<div id="centered">
+    {{if eq .Attempt 9}}
+        <img src="../spriteStickman/1.png">
+    {{end}}
+    {{if eq .Attempt 8}}
+        <img src="../spriteStickman/2.png">
+    {{end}}
+    {{if eq .Attempt 7}}
+        <img src="../spriteStickman/3.png">
+    {{end}}
+    {{if eq .Attempt 6}}
+        <img src="../spriteStickman/4.png">
+    {{end}}
+    {{if eq .Attempt 5}}
+        <img src="../spriteStickman/5.png">
+    {{end}}
+    {{if eq .Attempt 4}}
+        <img src="../spriteStickman/6.png">
+    {{end}}
+    {{if eq .Attempt 3}}
+        <img src="../spriteStickman/7.png">
+    {{end}}
+    {{if eq .Attempt 2}}
+        <img src="../spriteStickman/8.png">
+    {{end}}
+    {{if eq .Attempt 1}}
+        <img src="../spriteStickman/9.png">
+    {{end}}
+    <br><br>
+
+    <div id="guessWord">
+        {{range $element := .GuessWord}}
+            {{$element}}
+        {{end}}
+    </div>
+    <br>
+    You have {{.Attempt}} attempts remaining<br>
+    {{if not .WrongLetter}}
+        You didn't enter a letter<br>
+    {{end}}
+    {{if not .WrongWord}}
+        You didn't enter a correct word<br>
+    {{end}}
+    Letter already used : {{range $element := .UsedLetters}}
+        {{$element}}
+    {{end}}
+    <br>
+    <br>
+    <div id="test">
+        <form action="/hangman" method="post">
+            <label for="name">Choose a letter: </label>
+            <input type="text" name="Letter" id="name" required>
+            <input class="button" type="submit" value="Envoyer">
+        </form>
+        <br>
+        <p>or</p>
+        <br>
+        <form action="/hangman" method="post">
+            <label for="name">Choose a word: </label>
+            <input type="text" name="Word" id="name" required>
+            <input class="button" type="submit" value="Envoyer">
+        </form>
+    </div>
+    <br>
+    <br>
+    {{if .Solo}}
+        <form action="/restart" method="post">
+            <input id="reset" type="submit" value="Reset Word">
+        </form><br><br>
+    {{end}}
+    <form action="/" method="post">
+        <input id="reset" type="submit" value="Go Back To Menu">
+    </form>
+</div>
+</body>
+
+</html>
